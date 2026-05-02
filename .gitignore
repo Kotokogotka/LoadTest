@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+
+# IDE
+.idea/
+
+# Local secrets
+secrets/
+
+# OS files
+.DS_Store
