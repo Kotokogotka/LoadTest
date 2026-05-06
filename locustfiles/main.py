@@ -4,7 +4,7 @@ from accounts.loader import load_users
 from accounts.pool import AccountPool
 from clients.auth_client import AuthClient
 from scenarios.user_flows import visit_random_form, visit_random_arm
-
+from scenarios.add_data_116 import add_new_data_116
 
 @events.init.add_listener
 def on_locust_init(environment, **_kwargs) -> None:
@@ -57,7 +57,7 @@ class ApiUser(HttpUser):
         if self.account is not None:
             self.environment.account_pool.release(self.account)
     @tag("form")
-    @task
+    @task(2)
     def open_form(self) -> None:
         if not self.access_token:
             return
@@ -65,10 +65,16 @@ class ApiUser(HttpUser):
         visit_random_form(self)
 
     @tag("arm")
-    @task
+    @task(1)
     def visit_random_arm(self) -> None:
         if not self.access_token:
             return
         visit_random_arm(self)
 
 
+    @tag("116 create")
+    @task(5)
+    def new_anket_116(self):
+        if not self.access_token:
+            return
+        add_new_data_116(self)

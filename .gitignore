@@ -16,3 +16,5 @@ secrets/
 
 # OS files
 .DS_Store
+
+.gitignore
