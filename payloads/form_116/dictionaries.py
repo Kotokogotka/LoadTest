@@ -1,8 +1,5 @@
 import random
 
-"""
-Краткая выборка МКБ
-"""
 MKB_ITEMS = [
     {"id": "265", "name": "A50 - Врожденный сифилис"},
     {"id": "275", "name": "A51 - Ранний сифилис"},
@@ -21,40 +18,34 @@ MKB_ITEMS = [
     {"id": "570", "name": "B23.1 - ВИЧ с генерализованной лимфаденопатией"},
 ]
 
+
 def get_random_mkb():
     item = random.choice(MKB_ITEMS)
     return {"id": item["id"], "name": item["name"]}
 
 
-"""
-Пол
-"""
 GENDER = [
     {"id": "1", "name": "Мужской"},
     {"id": "2", "name": "Женский"},
 ]
+
 
 def get_random_gender():
     item = random.choice(GENDER)
     return {"id": item["id"], "name": item["name"]}
 
 
-"""
-Да\Нет
-"""
 YES_NO = [
     {"id": "282", "name": "Да"},
     {"id": "283", "name": "Нет"},
 ]
+
 
 def get_random_yes_no():
     item = random.choice(YES_NO)
     return {"id": item["id"], "name": item["name"]}
 
 
-"""
-Декретированный контингент (dictionaries_id: 1129) для поля 15649
-"""
 DECRETED_WORKERS = [
     {"id": "76949", "name": "Медицинский работник"},
     {"id": "76951", "name": "Нет"},
@@ -74,14 +65,12 @@ DECRETED_WORKERS = [
     {"id": "76950", "name": "Работник учебно-воспитательных учреждений"},
 ]
 
+
 def get_random_decreted_worker():
     item = random.choice(DECRETED_WORKERS)
     return {"id": item["id"], "name": item["name"]}
 
 
-"""
-Болел ли ранее данным заболеванием (dictionaries_id: 1134) для поля 15669
-"""
 PREVIOUS_ILLNESS = [
     {"id": "77437", "name": "Более 2-х лет назад"},
     {"id": "77436", "name": "Более года назад"},
@@ -93,14 +82,12 @@ PREVIOUS_ILLNESS = [
     {"id": "76989", "name": "Три месяца назад"},
 ]
 
+
 def get_random_previous_illness():
     item = random.choice(PREVIOUS_ILLNESS)
     return {"id": item["id"], "name": item["name"]}
 
 
-"""
-Тип наблюдения (dictionaries_id: 519) для поля 15686
-"""
 OBSERVATION_TYPES = [
     {"id": "71988", "name": "Амбулаторно"},
     {"id": "100004", "name": "Диспансеризация (скрининг)"},
@@ -109,14 +96,12 @@ OBSERVATION_TYPES = [
     {"id": "74215", "name": "стационар и амб. долечивание"},
 ]
 
+
 def get_random_observation_type():
     item = random.choice(OBSERVATION_TYPES)
     return {"id": item["id"], "name": item["name"]}
 
 
-"""
-Вид экстренной профилактики (dictionaries_id: 1132) для поля 15668
-"""
 EMERGENCY_PREVENTION_TYPES = [
     {"id": "76987", "name": "Анатоксины"},
     {"id": "76964", "name": "Антибиотикопрофилактика"},
@@ -130,14 +115,12 @@ EMERGENCY_PREVENTION_TYPES = [
     {"id": "76985", "name": "Эубиотики"},
 ]
 
+
 def get_random_emergency_prevention():
     item = random.choice(EMERGENCY_PREVENTION_TYPES)
     return {"id": item["id"], "name": item["name"]}
 
 
-"""
-Тяжесть инфекционного заболевания (dictionaries_id: 434) для поля 15664
-"""
 SEVERITY_TYPES = [
     {"id": "71420", "name": "легкое"},
     {"id": "86061", "name": "нетяжелое (для пневмоний)"},
@@ -145,27 +128,23 @@ SEVERITY_TYPES = [
     {"id": "71422", "name": "тяжелое"},
 ]
 
+
 def get_random_severity():
     item = random.choice(SEVERITY_TYPES)
     return {"id": item["id"], "name": item["name"]}
 
 
-"""
-Клиническая форма инфекционного заболевания (dictionaries_id: 1135) для поля 15677
-"""
 CLINICAL_FORMS = [
     {"id": "76976", "name": "Атипичная"},
     {"id": "76975", "name": "Типичная"},
 ]
+
 
 def get_random_clinical_form():
     item = random.choice(CLINICAL_FORMS)
     return {"id": item["id"], "name": item["name"]}
 
 
-"""
-Проявления атипичной формы (dictionaries_id: 1275) для поля 15665
-"""
 ATYPICAL_FORMS = [
     {"id": "78550", "name": "Абортивная"},
     {"id": "78549", "name": "Молниеносная"},
@@ -173,14 +152,12 @@ ATYPICAL_FORMS = [
     {"id": "78548", "name": "Стертая"},
 ]
 
+
 def get_random_atypical_form():
     item = random.choice(ATYPICAL_FORMS)
     return {"id": item["id"], "name": item["name"]}
 
 
-"""
-Был в путешествии (dictionaries_id: 1517) для поля 30974
-"""
 TRAVEL_STATUSES = [
     {"id": "100633", "name": "В путешествии не был"},
     {"id": "100631", "name": "За границей"},
@@ -188,19 +165,18 @@ TRAVEL_STATUSES = [
     {"id": "100632", "name": "По России/за границей"},
 ]
 
+
 def get_random_travel_status():
     item = random.choice(TRAVEL_STATUSES)
     return {"id": item["id"], "name": item["name"]}
 
 
-"""
-Исход заболевания для поля 15658
-"""
 OUTCOMES = [
     {"id": "86062", "name": "Выздоровел"},
     {"id": "76957", "name": "Летальный"},
     {"id": "76952", "name": "Переболел"},
 ]
+
 
 def get_random_outcome():
     item = random.choice(OUTCOMES)
