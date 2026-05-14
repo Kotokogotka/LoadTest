@@ -2,6 +2,7 @@ from locust import between, tag, task
 
 from locustfiles.base import BaseApiUser
 from scenarios.happy.create_form_116 import create_form_116
+from scenarios.happy.create_form_119 import create_and_soft_delete_form_119, create_form_119
 from scenarios.happy.forms import open_random_form
 
 
@@ -16,10 +17,26 @@ class StressUser(BaseApiUser):
 
         open_random_form(self)
 
-    @tag("stress", "116-create")
+    @tag("stress", "116-create", "116 create", "116", "create")
     @task(8)
     def new_anket_116(self) -> None:
         if not self.access_token:
             return
 
         create_form_116(self)
+
+    @tag("stress", "119-create", "119 create", "119", "create")
+    @task(8)
+    def new_anket_119(self) -> None:
+        if not self.access_token:
+            return
+
+        create_form_119(self)
+
+    @tag("stress", "119-patch", "119 patch", "119", "patch", "soft-delete")
+    @task(6)
+    def patch_anket_119(self) -> None:
+        if not self.access_token:
+            return
+
+        create_and_soft_delete_form_119(self)

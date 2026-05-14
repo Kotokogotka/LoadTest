@@ -5,7 +5,7 @@ from scenarios.negative.create_form_116 import create_invalid_form_116
 
 
 class NegativeValidationUser(BaseApiUser):
-    @tag("negative", "116-invalid")
+    @tag("negative", "116-invalid", "116", "invalid", "create")
     @task
     def create_invalid_anket_116(self) -> None:
         if not self.access_token:

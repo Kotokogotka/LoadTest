@@ -26,3 +26,17 @@ class FormsClient:
                 "Authorization": f"Bearer {access_token}",
             },
         )
+
+    def patch_form(self, anket_id: int, payload: dict, access_token: str):
+        return self.http_client.patch(
+            url=f"/constructor-be/anket/{anket_id}",
+            json=payload,
+            headers={"Authorization": f"Bearer {access_token}"},
+        )
+
+    def soft_delete_form(self, anket_id: int, access_token: str):
+        return self.patch_form(
+            anket_id=anket_id,
+            payload={"is_active": False},
+            access_token=access_token,
+        )

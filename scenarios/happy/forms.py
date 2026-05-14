@@ -2,11 +2,11 @@ import random
 
 FORM_IDS = [116, 223, 119, 165, 183, 224, 255, 232, 141]
 ARM_PATHS = [
-    "radiation/rm",
-    "chemistry/rm",
-    "biology/rm",
-    "cou/rm",
-    "map/operational",
+    "/radiation/rm",
+    "/chemistry/rm",
+    "/biology/rm",
+    "/cou/rm",
+    "/map/operational",
 ]
 
 

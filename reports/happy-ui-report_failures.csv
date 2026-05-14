@@ -1,0 +1,2 @@
+Method,Name,Error,Occurrences
+POST,/auth-be/auth/jwt/login,HTTPError('400 Client Error: Bad Request for url: /auth-be/auth/jwt/login'),6
